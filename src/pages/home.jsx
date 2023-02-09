@@ -23,7 +23,7 @@ export default function Home({navigation}){
                 data={items}
                 numColumns={2}
                 renderItem={({item,index})=>{
-                    if(searchQuery == ''||item.name.toLowerCase().includes(searchQuery)){
+                    if(searchQuery == ''||item.name.toLowerCase().includes(searchQuery.toLowerCase())){
                         return <Item item={item}/>
                     }
                 }}
